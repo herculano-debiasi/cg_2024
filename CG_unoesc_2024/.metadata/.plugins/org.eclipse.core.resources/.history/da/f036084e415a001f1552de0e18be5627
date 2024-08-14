@@ -1,0 +1,96 @@
+package desenho2d;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Desenho2D {
+	private enum Acoes {
+		DESENHAR, LIMPAR
+	}
+	
+	private Acoes acao = Acoes.LIMPAR;
+	
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Desenho2D window = new Desenho2D();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Desenho2D() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 236, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel pnlDesenho = new JPanel() {
+			protected void paintComponent(Graphics g) {
+	            super.paintComponent(g);
+	            this.setBackground(Color.WHITE);
+	            g.setColor(Color.BLACK);
+	            Graphics2D g2d = (Graphics2D) g.create();
+	            
+	            if(acao == Acoes.DESENHAR) {
+	            	g2d.drawLine(10, 10, 100, 100);
+	            } else if(acao == Acoes.LIMPAR){
+	            	g2d.clearRect(0, 0, 100, 100);
+	            }
+	            
+	            g2d.dispose();
+	        }
+		};
+		
+		pnlDesenho.setBounds(10, 10, 200, 200);
+		frame.getContentPane().add(pnlDesenho);
+		
+		JButton btnDesenhar = new JButton("Desenhar");
+		btnDesenhar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				acao = Acoes.DESENHAR;
+				frame.repaint();
+			}
+		});
+		btnDesenhar.setBounds(10, 221, 89, 23);
+		frame.getContentPane().add(btnDesenhar);
+		
+		JButton btnLimpar = new JButton("Limpar");
+		btnLimpar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				acao = Acoes.LIMPAR;
+				frame.repaint();
+			}
+		});
+		btnLimpar.setBounds(121, 221, 89, 23);
+		frame.getContentPane().add(btnLimpar);
+	}
+}

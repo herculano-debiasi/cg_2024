@@ -1,0 +1,11 @@
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\bin\Debug\Desenho2D-Básico.exe.config
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\bin\Debug\Desenho2D-Básico.exe
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\bin\Debug\Desenho2D-Básico.pdb
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.csproj.AssemblyReference.cache
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.csproj.SuggestedBindingRedirects.cache
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D.frmDesenho.resources
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D_Básico.Properties.Resources.resources
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.csproj.GenerateResource.cache
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.csproj.CoreCompileInputs.cache
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.exe
+D:\programas\cg\c_sharp\Desenho2D\Desenho2D - Básico\obj\Debug\Desenho2D-Básico.pdb

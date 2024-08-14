@@ -1,0 +1,19 @@
+INDEX VERSION 1.134+D:\programas\cg\2024\CG_unoesc_2024\.metadata\.plugins\org.eclipse.jdt.core
+230571379.index
+3415509331.index
+2499966210.index
+3036619413.index
+3561964249.index
+1239650266.index
+3335665369.index
+1581647970.index
+1880260602.index
+1470093581.index
+4281710316.index
+1105005739.index
+2908161399.index
+2487347902.index
+3987883787.index
+1865797976.index
+4286612754.index
+2428096472.index

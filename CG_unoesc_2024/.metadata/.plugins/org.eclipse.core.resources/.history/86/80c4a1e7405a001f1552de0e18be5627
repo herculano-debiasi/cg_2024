@@ -1,0 +1,63 @@
+package desenho2d;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Desenho2D {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Desenho2D window = new Desenho2D();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Desenho2D() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 236, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel pnlDesenho = new JPanel();
+		pnlDesenho.setBounds(10, 10, 200, 200);
+		frame.getContentPane().add(pnlDesenho);
+		
+		JButton btnDesenhar = new JButton("Desenhar");
+		btnDesenhar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnDesenhar.setBounds(10, 221, 89, 23);
+		frame.getContentPane().add(btnDesenhar);
+		
+		JButton btnLimpar = new JButton("Limpar");
+		btnLimpar.setBounds(121, 221, 89, 23);
+		frame.getContentPane().add(btnLimpar);
+	}
+}

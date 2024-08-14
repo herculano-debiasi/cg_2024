@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação com o Canvas</title>
+    <style>
+        body { background: #dddddd; }
+        
+        h3 { display: flex; align-items: center; 
+             justify-content: center; 
+             font-family: Verdana, sans-serif; 
+        }
+        
+        #meu_canvas {
+            display: block; margin: 0 auto;
+            padding: 20px; background: #ffffff;
+            border: thin inset #aaaaaa;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="meu_canvas" width="300" height="300">
+        Canvas não suportado
+    </canvas> 
+    
+    <script> 
+        // Canvas e contexto 
+        canvas = document.getElementById('meu_canvas'); 
+        context = canvas.getContext('2d'); 
+        
+        // Dados da bola 
+        let x = 20, y = 100, raio = 10;
+        
+        // Iniciar a animação 
+        requestAnimationFrame(mexerBola); 
+        
+        // Função de animação 
+        function mexerBola() { 
+            // Limpar o Canvas 
+            context.clearRect(0, 0, canvas.width, canvas.height); 
+            
+            // Desenhar a bola 
+            context.beginPath(); 
+            context.arc(x, y, raio, 0, Math.PI*2); 
+            context.fill(); 
+            
+            // Deslocar 20 pixels para a direita 
+            x = x>600 ? 20 : x + 20;
+            
+            // Chamar o próximo ciclo da animação 
+            requestAnimationFrame(mexerBola);
+        } 
+    </script>
+</body>
+</html>

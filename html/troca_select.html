@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trocando imagens com select</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <img id="imagem" src="img/img1.png">
+    <h3>Versão JavaScript</h3>
+    <form>
+        <select onchange="troca_imagemJS()" id="minhas_imagensJS">
+            <option value="img/img1.png">Imagem Um</option>
+            <option value="img/img2.png">Imagem Dois</option>
+            <option value="img/img3.png">Imagem Três</option>
+        </select>
+    </form>
+    <script>
+        function troca_imagemJS() {
+            let selecao = document.getElementById('minhas_imagensJS');
+            let indiceSelecao = selecao.selectedIndex;
+            let img = selecao.options[indiceSelecao].value;
+            console.log(img);
+
+            document.getElementById('imagem').src = img;
+        }
+    </script>
+    <hr/>
+    <h3>Versão JQuery</h3>
+    <form>
+        <select onchange="troca_imagemJS()" id="minhas_imagensJQ">
+            <option value="img/img1.png">Imagem Um</option>
+            <option value="img/img2.png">Imagem Dois</option>
+            <option value="img/img3.png">Imagem Três</option>
+        </select>
+    </form>
+    <script>
+        $('#minhas_imagensJQ').change(function(){
+            $('#imagem')[0].src = this.value;
+        });
+    </script>
+</body>
+</html>
