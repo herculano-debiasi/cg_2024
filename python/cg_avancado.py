@@ -88,11 +88,11 @@ class Ui(QtWidgets.QMainWindow):
 
         indexes = self.lwObjetos.selectedIndexes()
         if indexes:
-            index = indexes[0]
-            msg.setText(str(self.model.pessoas[index.row()][1]) + '\n' +
-                        'Caixa polígono está ' + ('marcada' if self.cbPoligono.isChecked() else 'desmarcada') + '\n' +
-                        'Número de itens na caixa: ' + self.lwObjetos.count() + '\n' +
-                        'Índice selecionado: ' + index)
+            index = indexes[0].row()
+            msg.setText(f'{self.model.pessoas[index][1]}\n' + 
+                        f'Caixa polígono está {"marcada" if self.cbPoligono.isChecked() else "desmarcada"}\n' +
+                        f'Número de itens na caixa: {len(self.model.pessoas)}\n' +
+                        f'Índice selecionado: {index}')
         else:
             msg.setText('Nenhum item selecionado!')
 
