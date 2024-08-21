@@ -24,8 +24,8 @@ namespace Desenho2D
             Pen caneta = new Pen(Color.Green, 5);
             
             g.DrawLine(caneta,
-                new Point((int)0, (int)0),
-                new Point((int)100, (int)100)
+                new Point(0, 0),
+                new Point(100, 100)
             );
         }
 
