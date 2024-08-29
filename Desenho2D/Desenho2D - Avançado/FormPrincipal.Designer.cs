@@ -1,6 +1,6 @@
 ﻿namespace Desenho2D
 {
-    partial class frmDesenhoAvancado
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -39,6 +39,7 @@
             this.lbObjetos = new System.Windows.Forms.ListBox();
             this.btnMostrarInfos = new System.Windows.Forms.Button();
             this.ckbxPoligono = new System.Windows.Forms.CheckBox();
+            this.btnFormInfos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCaixaDesenho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,11 +152,23 @@
             this.ckbxPoligono.Text = "Polígono";
             this.ckbxPoligono.UseVisualStyleBackColor = true;
             // 
-            // frmDesenhoAvancado
+            // btnFormInfos
+            // 
+            this.btnFormInfos.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnFormInfos.Location = new System.Drawing.Point(420, 324);
+            this.btnFormInfos.Name = "btnFormInfos";
+            this.btnFormInfos.Size = new System.Drawing.Size(114, 23);
+            this.btnFormInfos.TabIndex = 11;
+            this.btnFormInfos.Text = "Janela Infos.";
+            this.btnFormInfos.UseVisualStyleBackColor = true;
+            this.btnFormInfos.Click += new System.EventHandler(this.btnFormInfos_Click);
+            // 
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 359);
+            this.Controls.Add(this.btnFormInfos);
             this.Controls.Add(this.ckbxPoligono);
             this.Controls.Add(this.btnMostrarInfos);
             this.Controls.Add(this.lbObjetos);
@@ -168,7 +181,7 @@
             this.Controls.Add(this.btnDesenhar);
             this.Controls.Add(this.pbCaixaDesenho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmDesenhoAvancado";
+            this.Name = "frmPrincipal";
             this.Text = "Desenho 2D";
             ((System.ComponentModel.ISupportInitialize)(this.pbCaixaDesenho)).EndInit();
             this.ResumeLayout(false);
@@ -189,6 +202,7 @@
         public System.Windows.Forms.ListBox lbObjetos;
         private System.Windows.Forms.Button btnMostrarInfos;
         private System.Windows.Forms.CheckBox ckbxPoligono;
+        private System.Windows.Forms.Button btnFormInfos;
     }
 }
 

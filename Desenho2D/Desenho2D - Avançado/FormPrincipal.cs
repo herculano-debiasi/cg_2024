@@ -12,7 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Desenho2D
 {
-    public partial class frmDesenhoAvancado : Form
+    public partial class frmPrincipal : Form
     {
         enum Acoes
         {
@@ -22,7 +22,7 @@ namespace Desenho2D
         private Acoes acao = Acoes.LIMPAR;
 
         private int count = 1;
-        public frmDesenhoAvancado()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
@@ -88,7 +88,28 @@ namespace Desenho2D
             }
             else
             {
-                //JOptionPane.showMessageDialog(null, "Nenhum item selecionado!");
+                MessageBox.Show("Nenhum item selecionado!");
+            }
+        }
+
+        private void btnFormInfos_Click(object sender, EventArgs e)
+        {
+            if (lbObjetos.SelectedIndex != -1)
+            {
+                Pessoa p = (Pessoa)lbObjetos.SelectedItem;
+
+                FormInfos frmInfos = new FormInfos();
+
+                // É necessário modificar a propriedade 'Modifier' dos componentes
+                // abaixo no FormInfos para o valor 'public'
+                frmInfos.lblNome.Text = p.Nome;
+                frmInfos.lblIdade.Text = p.Idade.ToString();
+
+                frmInfos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione algum item!");
             }
         }
     }
